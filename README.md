@@ -1,3 +1,23 @@
+# Create William App
+
+In order to use Utility Warehouse version of create-react-app you need to ensure you have access to our private npm registry.
+You will need `.npmrc` file with authToken in your home directory.
+
+## Quick Overview
+
+```sh
+npm install -g create-react-app
+
+create-react-app my-app --scripts-version william-react-scripts
+cd my-app/
+make install
+make dev
+```
+
+------
+
+README below is the exact copy of forked facebookincubator/create-react-app repository.
+
 # Create React App [![Build Status](https://travis-ci.org/facebookincubator/create-react-app.svg?branch=master)](https://travis-ci.org/facebookincubator/create-react-app)
 
 Create React apps with no build configuration.

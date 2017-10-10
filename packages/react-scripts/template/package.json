@@ -30,6 +30,7 @@
     "@utilitywarehouse/william-sdk": "^0.1.6",
     "@utilitywarehouse/william-ui": "^0.1.6",
     "@utilitywarehouse/william-redux": "^0.1.4",
+    "babel-polyfill": "^6.26.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-native-web": "^0.1.7",

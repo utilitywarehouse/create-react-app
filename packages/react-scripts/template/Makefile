@@ -14,7 +14,7 @@ bypass:
 # BOOTSTRAPPING
 
 install:
-	yarn install
+	npm install
 
 # RUNNING (WEB)
 

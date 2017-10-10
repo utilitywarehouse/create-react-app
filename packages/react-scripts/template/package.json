@@ -24,15 +24,15 @@
     "babel-register": "^6.16.3",
     "babel-root-import": "^4.1.3",
     "react-scripts": "^1.0.11",
-    "webpack": "2.5.1"
+    "webpack": "^3.6.0"
   },
   "dependencies": {
-    "@utilitywarehouse/william-sdk": "^0.1.0",
-    "@utilitywarehouse/william-ui": "^0.1.0",
-    "@utilitywarehouse/william-redux": "^0.1.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-native-web": "^0.0.120",
+    "@utilitywarehouse/william-sdk": "^0.1.6",
+    "@utilitywarehouse/william-ui": "^0.1.6",
+    "@utilitywarehouse/william-redux": "^0.1.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-native-web": "^0.1.7",
     "react-navigation": "1.0.0-beta.11",
     "redux": "^3.6.0"
   }

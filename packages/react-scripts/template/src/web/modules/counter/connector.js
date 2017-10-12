@@ -1,4 +1,4 @@
-import { connect } from '@utilitywarehouse/william-redux';
+import { connect } from 'react-redux';
 import { KEY } from './reducers';
 
 const mapStateToProps = state => ({

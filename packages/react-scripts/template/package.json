@@ -27,14 +27,15 @@
     "webpack": "^3.6.0"
   },
   "dependencies": {
-    "@utilitywarehouse/william-sdk": "^0.1.6",
-    "@utilitywarehouse/william-ui": "^0.1.6",
-    "@utilitywarehouse/william-redux": "^0.1.4",
+    "@utilitywarehouse/william-sdk": "^0.1.7",
+    "@utilitywarehouse/william-ui": "^0.1.7",
+    "@utilitywarehouse/william-redux": "^0.1.7",
     "babel-polyfill": "^6.26.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-native-web": "^0.1.7",
     "react-navigation": "1.0.0-beta.11",
+    "react-redux": "^5.0.6",
     "redux": "^3.6.0"
   }
 }

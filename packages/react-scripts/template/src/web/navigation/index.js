@@ -7,10 +7,18 @@ import ThreeScreen from '../screens/three';
 import FourScreen from '../screens/four';
 
 const Root = RootNavigator({
-  ...OneScreen,
-  ...TwoScreen,
-  ...ThreeScreen,
-  ...FourScreen,
+  One: { path: 'one', screen: OneScreen, navigationOptions: { title: 'One' } },
+  Two: { path: 'two', screen: TwoScreen, navigationOptions: { title: 'Two' } },
+  Three: {
+    path: 'three',
+    screen: ThreeScreen,
+    navigationOptions: { title: 'Three' },
+  },
+  Four: {
+    path: 'four',
+    screen: FourScreen,
+    navigationOptions: { title: 'Four' },
+  },
 });
 
 export default BrowserAppContainer(Root);

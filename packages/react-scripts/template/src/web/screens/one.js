@@ -1,6 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
-import { Button } from '@utilitywarehouse/william-ui';
+import { Text, View, Button } from '@utilitywarehouse/william-ui';
 import connector from '../modules/counter/connector';
 
 export default {

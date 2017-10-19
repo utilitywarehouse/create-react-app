@@ -1,7 +1,10 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Colors } from '@utilitywarehouse/william-ui/foundation';
-import { ActionCell } from '@utilitywarehouse/william-ui';
+import {
+  StyleSheet,
+  View,
+  ActionCell,
+  Colors,
+} from '@utilitywarehouse/william-ui';
 
 export default ({ style, navigation }) => (
   <View style={[styles.container, style]}>

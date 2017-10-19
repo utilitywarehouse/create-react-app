@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, StyleSheet } from '@utilitywarehouse/william-ui';
 
 export default name => () => <Text style={styles.text}>{name}</Text>;
 

@@ -1,8 +1,7 @@
 import React from 'react';
 import { addNavigationHelpers } from 'react-navigation';
-import { Layout } from '@utilitywarehouse/william-ui/layout';
-import Left from '../../left';
-import Header from '../../header';
+import { Layout, Margin } from '@utilitywarehouse/william-ui';
+import Left from 'bindings/leftMenu';
 
 export default ({ navigation, router, ...props }) => {
   const { state } = navigation;
@@ -16,9 +15,13 @@ export default ({ navigation, router, ...props }) => {
 
   return (
     <Layout
-      header={<Header navigation={navigation} {...props} />}
+      style={{ height: '100vh' }}
       left={<Left navigation={navigation} {...props} />}
-      center={<Component navigation={contentNavigation} {...props} />}
+      center={
+        <Margin>
+          <Component navigation={contentNavigation} {...props} />
+        </Margin>
+      }
     />
   );
 };

@@ -12,7 +12,9 @@
   },
   "moduleRoots": [
     "src/web/",
-    "src/modules/"
+    "src/modules/",
+    "src/screens/",
+    "src/components/"
   ],
   "devDependencies": {
     "babel-core": "6.26.0",
@@ -27,14 +29,15 @@
     "webpack": "^3.6.0"
   },
   "dependencies": {
-    "@utilitywarehouse/william-sdk": "^0.1.7",
-    "@utilitywarehouse/william-ui": "^0.1.7",
-    "@utilitywarehouse/william-redux": "^0.1.7",
+    "@utilitywarehouse/william-redux": "^0.1.14",
+    "@utilitywarehouse/william-sdk": "^0.1.20",
+    "@utilitywarehouse/william-ui": "^0.1.20",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-native-web": "^0.1.7",
     "react-navigation": "1.0.0-beta.11",
     "react-redux": "^5.0.6",
+    "recompose": "^0.26.0",
     "redux": "^3.6.0"
   }
 }

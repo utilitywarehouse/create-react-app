@@ -1,12 +1,15 @@
-import { BrowserAppContainer } from '@utilitywarehouse/william-sdk/navigation';
+import { SidePanelNavigator } from '@utilitywarehouse/william-sdk';
+import BrowserContainerModule from 'modules/browserContainer';
 import RootNavigator from './tabs';
 
-import OneScreen from '../screens/one';
-import TwoScreen from '../screens/two';
-import ThreeScreen from '../screens/three';
-import FourScreen from '../screens/four';
+import OneScreen from 'screens/one';
+import TwoScreen from 'screens/two';
+import ThreeScreen from 'screens/three';
+import FourScreen from 'screens/four';
 
-const Root = RootNavigator({
+import Modals from 'screens/modals';
+
+const MainMenu = RootNavigator({
   One: { path: 'one', screen: OneScreen, navigationOptions: { title: 'One' } },
   Two: { path: 'two', screen: TwoScreen, navigationOptions: { title: 'Two' } },
   Three: {
@@ -21,4 +24,12 @@ const Root = RootNavigator({
   },
 });
 
-export default BrowserAppContainer(Root);
+const Root = SidePanelNavigator(
+  { Root: { path: 'root', screen: MainMenu } },
+  {
+    Search: { screen: Modals.Search },
+    Account: { screen: Modals.Account },
+  }
+);
+
+export default BrowserContainerModule.wrap(Root);

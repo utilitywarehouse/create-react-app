@@ -15,6 +15,9 @@ bypass:
 
 install:
 	npm install
+	
+test:
+	npm test
 
 # RUNNING (WEB)
 

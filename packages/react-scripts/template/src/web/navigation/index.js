@@ -1,17 +1,18 @@
-import { SidePanelNavigator } from '@utilitywarehouse/william-sdk';
-import BrowserContainerModule from 'modules/browserContainer';
-import RootNavigator from './tabs';
+import { SidePanelNavigator } from '@utilitywarehouse/william-sdk'
+import RootNavigator from './tabs'
 
-import OneScreen from 'screens/one';
-import TwoScreen from 'screens/two';
-import ThreeScreen from 'screens/three';
-import FourScreen from 'screens/four';
+import SidePanelToolbar from 'components/SidePanelToolbar'
 
-import Modals from 'screens/modals';
+import OneScreen from 'screens/One'
+import TwoScreen from 'screens/Two'
+import ThreeScreen from 'screens/Three'
+import FourScreen from 'screens/Four'
+
+import Modals from 'screens/modals'
 
 const MainMenu = RootNavigator({
-  One: { path: 'one', screen: OneScreen, navigationOptions: { title: 'One' } },
-  Two: { path: 'two', screen: TwoScreen, navigationOptions: { title: 'Two' } },
+  One: { path: 'counter', screen: OneScreen, navigationOptions: { title: 'Counter' } },
+  Two: { path: 'modal', screen: TwoScreen, navigationOptions: { title: 'Modal' } },
   Three: {
     path: 'three',
     screen: ThreeScreen,
@@ -22,14 +23,15 @@ const MainMenu = RootNavigator({
     screen: FourScreen,
     navigationOptions: { title: 'Four' },
   },
-});
+})
 
 const Root = SidePanelNavigator(
-  { Root: { path: 'root', screen: MainMenu } },
+  { Root: { path: '', screen: MainMenu } },
   {
     Search: { screen: Modals.Search },
     Account: { screen: Modals.Account },
-  }
-);
+  },
+  SidePanelToolbar
+)
 
-export default BrowserContainerModule.wrap(Root);
+export default Root

@@ -6,9 +6,10 @@
   "main": "src/index.js",
   "license": "UNLICENSED",
   "scripts": {
-    "start:server": "node server",
+    "lint": "eslint .",
+    "precommit": "lint-staged",
     "eject": "react-scripts eject",
-    "test": "jest"
+    "test": "jest --config=jest/config.json"
   },
   "moduleRoots": [
     "src/web/",
@@ -16,26 +17,9 @@
     "src/screens/",
     "src/components/"
   ],
-  "jest": {
-    "modulePaths": [
-      "src/web/",
-      "src/modules/",
-      "src/screens/",
-      "src/components/"
-    ],
-    "transform": {
-      "^.+\\.js": "babel-jest"
-    },
-    "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|react-navigation)"
-    ],
-    "moduleNameMapper": {
-      "^react-native$": "<rootDir>/node_modules/react-native-web"
-    },
-    "setupTestFrameworkScriptFile": "<rootDir>/setupTestsFramework.js"
-  },
   "devDependencies": {
     "babel-core": "6.26.0",
+    "babel-eslint": "^8.2.2",
     "babel-jest": "^17.0.2",
     "babel-plugin-transform-export-extensions": "^6.8.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.12",
@@ -47,20 +31,31 @@
     "chai": "^3.5.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.3",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-react": "^7.7.0",
     "react-scripts": "^1.0.11",
     "jest": "^22.1.2",
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1"
   },
   "dependencies": {
-    "@utilitywarehouse/william-redux": "^0.1.14",
-    "@utilitywarehouse/william-sdk": "^0.1.28",
-    "@utilitywarehouse/william-ui": "^0.1.28",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-native-web": "^0.1.7",
+    "@utilitywarehouse/william-sdk": "0.2.0-alpha.b3395b17",
+    "lodash": "^4.17.10",
+    "immutable": "^3.8.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.3.2",
+    "react-art": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-native-web": "^0.7.2",
     "react-navigation": "1.0.0-beta.11",
-    "react-redux": "^5.0.6",
-    "recompose": "^0.26.0",
-    "redux": "^3.6.0"
+    "react-redux": "^5.0.7",
+    "recompose": "^0.27.0",
+    "redux": "^3.6.0",
+    "redux-form": "^7.3.0",
+    "redux-immutablejs": "0.0.8",
+    "redux-saga": "^0.15.4"
   }
 }

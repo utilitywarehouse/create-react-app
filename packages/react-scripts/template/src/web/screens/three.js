@@ -1,3 +1,3 @@
-import empty from './empty';
+import empty from './empty'
 
-export default empty(`Screen three... `);
+export default empty(`Screen three... `)

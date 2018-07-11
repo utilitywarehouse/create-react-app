@@ -1,3 +1,3 @@
-import empty from './empty';
+import Modal from 'bindings/Modal'
 
-export default empty(`Screen two... `);
+export default Modal

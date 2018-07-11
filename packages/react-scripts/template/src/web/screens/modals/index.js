@@ -1,7 +1,7 @@
-import Search from './search';
-import Account from './account';
+import Search from './Search'
+import Account from './Account'
 
 export default {
   Search,
   Account,
-};
+}

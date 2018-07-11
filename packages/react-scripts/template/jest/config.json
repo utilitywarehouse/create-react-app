@@ -1,0 +1,21 @@
+{
+  "rootDir": "../",
+  "roots": ["<rootDir>/jest/", "<rootDir>/src/"],
+  "automock": false,
+  "setupTestFrameworkScriptFile": "<rootDir>/jest/setupTestFramework.js",
+  "coverageDirectory": "<rootDir>/coverage",
+  "moduleNameMapper": {
+    "^react-native$": "react-native-web"
+  },
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "transform": {
+    "^.+\\.js": "babel-jest"
+  },
+  "transformIgnorePatterns": ["node_modules/(?!(jest-)?react-native|react-navigation)"],
+  "modulePaths": [
+    "src/web/",
+    "src/modules/",
+    "src/screens/",
+    "src/components/"
+  ]
+}

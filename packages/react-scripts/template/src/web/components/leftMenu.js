@@ -1,54 +1,58 @@
-import React from 'react';
-import {
-  StyleSheet,
-  View,
-  MenuCell,
-  withTheme,
-} from '@utilitywarehouse/william-ui';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { View, Button, themedComponent } from '@utilitywarehouse/william-sdk'
 
-const Component = ({ navigateHandler, isMenuSelected, style }) => (
-  <View style={[styles.container, style]}>
-    <MenuCell
+const LeftMenu = ({ navigateHandler, isMenuSelected, style }) => (
+  <View style={style}>
+    <Button
       title="Counter"
-      iconName="git-network"
+      icon="git-network"
+      display={isMenuSelected('One') ? 'outline' : 'transparent'}
+      type={isMenuSelected('One') ? 'primary' : 'normal'}
       onPress={navigateHandler('One')}
-      isSelected={isMenuSelected('One')}
     />
-    <MenuCell
-      title="Menu item two"
-      iconName="people"
+    <Button
+      title="Modal example"
+      icon="people"
+      display={isMenuSelected('Two') ? 'outline' : 'transparent'}
+      type={isMenuSelected('Two') ? 'primary' : 'normal'}
       onPress={navigateHandler('Two')}
-      isSelected={isMenuSelected('Two')}
     />
-    <MenuCell
+    <Button
       title="Menu item three"
-      iconName="book-outline"
+      icon="book-outline"
+      display={isMenuSelected('Three') ? 'outline' : 'transparent'}
+      type={isMenuSelected('Three') ? 'primary' : 'normal'}
       onPress={navigateHandler('Three')}
-      isSelected={isMenuSelected('Three')}
     />
-    <MenuCell
+    <Button
       title="Menu item four"
-      iconName="school"
+      icon="school"
+      display={isMenuSelected('Four') ? 'outline' : 'transparent'}
+      type={isMenuSelected('Four') ? 'primary' : 'normal'}
       onPress={navigateHandler('Four')}
-      isSelected={isMenuSelected('Four')}
     />
   </View>
-);
+)
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignSelf: 'stretch',
-    flexDirection: 'column',
-    borderRightWidth: 1,
-    minWidth: 240,
-    padding: 12,
-  },
-});
+LeftMenu.propTypes = {
+  navigateHandler: PropTypes.func.required,
+  isMenuSelected: PropTypes.func.required,
+  style: View.propTypes.style,
+}
 
-const name = 'LeftMenu';
-const mapThemeToProps = (theme, { style }) => ({
-  style: [{ borderColor: theme.colors.borders }, style],
-});
+const styles = theme => ({
+  flex: 1,
+  alignSelf: 'stretch',
+  flexDirection: 'column',
+  borderRightWidth: 1,
+  minWidth: 240,
+  padding: theme.spacing.medium,
+  borderColor: theme.border.color,
+})
 
-export default withTheme({ name, mapThemeToProps })(Component);
+export default themedComponent({
+  name: 'LeftMenu',
+  styles,
+  stylesToProps: 'style',
+})(LeftMenu)

@@ -1,17 +1,18 @@
-import React from 'react';
-import { addNavigationHelpers } from 'react-navigation';
-import { Layout, Margin } from '@utilitywarehouse/william-ui';
-import Left from 'bindings/leftMenu';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { addNavigationHelpers } from 'react-navigation'
+import { Layout, Margin } from '@utilitywarehouse/william-sdk'
+import Left from 'bindings/LeftMenu'
 
-export default ({ navigation, router, ...props }) => {
-  const { state } = navigation;
+const TabsView = ({ navigation, router, ...props }) => {
+  const { state } = navigation
 
-  const Component = router.getComponentForState(state);
+  const Component = router.getComponentForState(state)
 
   const contentNavigation = addNavigationHelpers({
     ...navigation,
     state: state.routes[state.index],
-  });
+  })
 
   return (
     <Layout
@@ -23,5 +24,12 @@ export default ({ navigation, router, ...props }) => {
         </Margin>
       }
     />
-  );
-};
+  )
+}
+
+TabsView.propTypes = {
+  navigation: PropTypes.any,
+  router: PropTypes.any,
+}
+
+export default TabsView

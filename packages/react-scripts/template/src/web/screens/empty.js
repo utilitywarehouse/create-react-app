@@ -1,7 +1,15 @@
-import React from 'react';
-import { Text, StyleSheet } from '@utilitywarehouse/william-ui';
+import React from 'react'
+import { withProps } from 'recompose'
+import PropTypes from 'prop-types'
+import { Text, StyleSheet } from '@utilitywarehouse/william-sdk'
 
-export default name => () => <Text style={styles.text}>{name}</Text>;
+const EmptyScreen = ({ name }) => <Text style={styles.text}>{name}</Text>
+EmptyScreen.displayName = 'EmptyScreen'
+EmptyScreen.propTypes = {
+  name: PropTypes.string,
+}
+
+export default name => withProps({ name })(EmptyScreen)
 
 const styles = StyleSheet.create({
   text: {
@@ -9,4 +17,4 @@ const styles = StyleSheet.create({
     paddingLeft: 32,
     fontSize: 18,
   },
-});
+})

@@ -7,10 +7,12 @@ import flow from 'lodash/fp/flow'
 import mapValues from 'lodash/fp/mapValues'
 import set from 'lodash/fp/set'
 
+reactNative.ViewPropTypes.style = PropTypes.any
+
 const createStyles = mapValues(value => `StyleSheet.create(${JSON.stringify(value)})`)
 
 const View = props => <div {...props} />
-View.propTypes = mapValues(constant(PropTypes.any), reactNative.View.propTypes)
+View.propTypes = mapValues(constant(PropTypes.any), reactNative.ViewPropTypes)
 
 const Text = props => <span {...props} />
 Text.propTypes = mapValues(constant(PropTypes.any), reactNative.Text.propTypes)

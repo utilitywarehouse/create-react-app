@@ -2,6 +2,7 @@
   "rootDir": "../",
   "roots": ["<rootDir>/jest/", "<rootDir>/src/"],
   "automock": false,
+  "preset": "react-native",
   "setupTestFrameworkScriptFile": "<rootDir>/jest/setupTestFramework.js",
   "coverageDirectory": "<rootDir>/coverage",
   "moduleNameMapper": {
@@ -13,9 +14,6 @@
   },
   "transformIgnorePatterns": ["node_modules/(?!(jest-)?react-native|react-navigation)"],
   "modulePaths": [
-    "src/web/",
-    "src/modules/",
-    "src/screens/",
-    "src/components/"
+    "src/"
   ]
 }

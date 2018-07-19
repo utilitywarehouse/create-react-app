@@ -1,2 +1,3 @@
-import * as index from './web/index'
-export default index
+// entry file for "react-scripts start" script
+import '@utilitywarehouse/william-sdk/register'
+import './index.web'

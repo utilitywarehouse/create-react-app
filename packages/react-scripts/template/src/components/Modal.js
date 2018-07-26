@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { DialogModal, Button, Badge } from '@utilitywarehouse/william-sdk'
+import { View, DialogModal, Button, Badge, themedComponent } from '@utilitywarehouse/william-sdk'
 
-const Component = ({ onOpenPress, isOpen, onRequestClose }) => (
-  <React.Fragment>
+const Component = ({ style, onOpenPress, isOpen, onRequestClose }) => (
+  <View style={style}>
     <Button title="Open modal" onPress={onOpenPress} />
     <DialogModal title="Example modal" isOpen={isOpen} onRequestClose={onRequestClose}>
       <Badge icon="alarm" fitInSquare size={168} />
     </DialogModal>
-  </React.Fragment>
+  </View>
 )
 
 Component.propTypes = {
@@ -17,4 +17,12 @@ Component.propTypes = {
   onRequestClose: PropTypes.func,
 }
 
-export default Component
+const styles = theme => ({
+  margin: theme.spacing.medium,
+})
+
+export default themedComponent({
+  name: 'ModalScreen',
+  styles,
+  stylesToProps: 'style',
+})(Component)

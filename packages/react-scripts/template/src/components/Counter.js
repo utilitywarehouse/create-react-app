@@ -6,6 +6,8 @@ import {
   Button,
   themedComponent,
   spreadStylesToProps,
+  TextPropTypes,
+  ViewPropTypes,
 } from '@utilitywarehouse/william-sdk'
 
 const Component = ({ add, sub, counter, valueStyle, buttonStyle }) => (
@@ -20,8 +22,8 @@ Component.propTypes = {
   add: PropTypes.func,
   sub: PropTypes.func,
   counter: PropTypes.number,
-  buttonStyle: View.propTypes.style,
-  valueStyle: View.propTypes.style,
+  buttonStyle: ViewPropTypes.style,
+  valueStyle: TextPropTypes.style,
 }
 
 export default themedComponent({

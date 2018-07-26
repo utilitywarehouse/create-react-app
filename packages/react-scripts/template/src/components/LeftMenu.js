@@ -36,8 +36,8 @@ const LeftMenu = ({ navigateHandler, isMenuSelected, style }) => (
 )
 
 LeftMenu.propTypes = {
-  navigateHandler: PropTypes.func.required,
-  isMenuSelected: PropTypes.func.required,
+  navigateHandler: PropTypes.func,
+  isMenuSelected: PropTypes.func,
   style: View.propTypes.style,
 }
 

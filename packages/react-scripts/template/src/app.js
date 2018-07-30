@@ -5,8 +5,9 @@ import {
   NavigationModule,
   OverlayModule,
   ThemeModule,
+  ResponsiveModule,
 } from '@utilitywarehouse/william-sdk'
-import Navigation from './navigation'
+import Navigator from './navigation'
 import theme from './theme'
 
 import CounterModule from 'modules/counter'
@@ -19,9 +20,10 @@ export default function() {
   const william = createWilliam(
     config,
     CounterModule(),
-    OverlayModule(),
     ThemeModule(theme),
-    NavigationModule({ navigator: Navigation })
+    ResponsiveModule(),
+    OverlayModule(),
+    NavigationModule({ navigator: Navigator })
   )
 
   return {

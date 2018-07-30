@@ -1,7 +1,7 @@
 export SHELL = /bin/bash
 
 .DEFAULT: help
-.PHONY: dist test
+.PHONY: dist test ios web android
 
 help:
 	@echo Available targets:
@@ -15,17 +15,30 @@ bypass:
 
 install:
 	npm install
+
+link:
+	react-native link react-native-vector-icons
+	# https://github.com/utilitywarehouse/william-sdk/issues/407#issuecomment-406276949
 	
 test:
 	npm test
 
 # RUNNING (WEB)
 
-dev: ## runs express in dev mode serving with hot replacement
+web: ## runs express in dev mode serving with hot replacement
 	PORT=$(PORT) \
 	BROWSER=none \
 	NODE_PATH=src/:src/web/ \
 	node_modules/.bin/react-scripts start
+
+bundler:
+	npm run bundler
+
+ios:
+	npm run ios
+
+android:
+	npm run android
 
 # BUILDING
 

@@ -1,5 +1,5 @@
-import { SidePanelNavigator } from '@utilitywarehouse/william-sdk'
-import RootNavigator from './tabs'
+import { SidePanelNavigator, TabNavigator } from '@utilitywarehouse/william-sdk'
+import RootNavigationContainer from 'bindings/RootNavigationContainer'
 
 import SidePanelToolbar from 'components/SidePanelToolbar'
 
@@ -10,20 +10,23 @@ import FourScreen from 'screens/Four'
 
 import Modals from 'screens/modals'
 
-const MainMenu = RootNavigator({
-  One: { path: 'counter', screen: OneScreen, navigationOptions: { title: 'Counter' } },
-  Two: { path: 'modal', screen: TwoScreen, navigationOptions: { title: 'Modal' } },
-  Three: {
-    path: 'three',
-    screen: ThreeScreen,
-    navigationOptions: { title: 'Three' },
+const MainMenu = TabNavigator(
+  {
+    One: { path: 'counter', screen: OneScreen, navigationOptions: { title: 'Counter' } },
+    Two: { path: 'modal', screen: TwoScreen, navigationOptions: { title: 'Modal' } },
+    Three: {
+      path: 'three',
+      screen: ThreeScreen,
+      navigationOptions: { title: 'Three' },
+    },
+    Four: {
+      path: 'four',
+      screen: FourScreen,
+      navigationOptions: { title: 'Four' },
+    },
   },
-  Four: {
-    path: 'four',
-    screen: FourScreen,
-    navigationOptions: { title: 'Four' },
-  },
-})
+  { Container: RootNavigationContainer }
+)
 
 const Root = SidePanelNavigator(
   { Root: { path: '', screen: MainMenu } },

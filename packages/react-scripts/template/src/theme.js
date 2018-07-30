@@ -6,4 +6,15 @@ export default {
       },
     },
   },
+  components: {
+    Tab: {
+      styles: {
+        container: {
+          default: {
+            height: 48,
+          },
+        },
+      },
+    },
+  },
 }

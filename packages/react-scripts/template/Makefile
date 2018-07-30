@@ -23,6 +23,9 @@ link:
 test:
 	npm test
 
+storybook:
+	npm run storybook
+
 # RUNNING (WEB)
 
 web: ## runs express in dev mode serving with hot replacement

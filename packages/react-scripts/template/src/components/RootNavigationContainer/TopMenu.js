@@ -40,6 +40,6 @@ TopMenu.propTypes = {
 
 export default themedComponent({
   name: 'TopMenu',
-  styles: { justifyContent: 'space-evenly', width: '100%' },
+  styles: { justifyContent: 'space-evenly', width: '100%', marginTop: 18 },
   stylesToProps: 'contentStyle',
 })(TopMenu)

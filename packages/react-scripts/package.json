@@ -1,7 +1,7 @@
 {
-  "name": "william-react-scripts",
+  "name": "cerdo-react-scripts",
   "version": "1.0.23",
-  "description": "UW William configuration and scripts for Create React App.",
+  "description": "UW Cerdo configuration and scripts for Create React App.",
   "repository": "utilitywarehouse/create-react-app",
   "license": "BSD-3-Clause",
   "engines": {

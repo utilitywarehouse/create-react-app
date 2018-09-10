@@ -1,4 +1,4 @@
-import { SidePanelNavigator, TabNavigator } from '@utilitywarehouse/william-sdk'
+import { SidePanelNavigator, TabNavigator } from '@utilitywarehouse/cerdo-sdk'
 import RootNavigationContainer from 'bindings/RootNavigationContainer'
 
 import SidePanelToolbar from 'components/SidePanelToolbar'

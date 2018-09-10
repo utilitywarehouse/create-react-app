@@ -1,6 +1,6 @@
 import { configure, addDecorator } from '@storybook/react'
 import { setOptions } from '@storybook/addon-options'
-import { Container } from '@utilitywarehouse/william-storybook-utils'
+import { Container } from '@utilitywarehouse/cerdo-storybook-utils'
 
 setOptions({
   name: 'cerdo-app',

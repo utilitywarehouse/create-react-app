@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Text, View, Button, TextPropTypes, ViewPropTypes } from '@utilitywarehouse/william-sdk'
+import { Text, View, Button, TextPropTypes, ViewPropTypes } from '@utilitywarehouse/cerdo-sdk'
 
 const Component = ({ add, sub, counter, valueStyle, buttonStyle }) => (
   <View>

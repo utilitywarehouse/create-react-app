@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { View, Button, themedComponent } from '@utilitywarehouse/william-sdk'
+import { View, Button, themedComponent } from '@utilitywarehouse/cerdo-sdk'
 
 const BUTTON_SIZE = 16
 

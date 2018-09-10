@@ -8,7 +8,7 @@ import {
   Header,
   Separator,
   JSX,
-} from '@utilitywarehouse/william-storybook-utils'
+} from '@utilitywarehouse/cerdo-storybook-utils'
 
 import * as example from './examples'
 

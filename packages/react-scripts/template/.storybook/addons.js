@@ -1,5 +1,5 @@
-import '@utilitywarehouse/william-storybook-utils/lib/props-addon/register'
+import '@utilitywarehouse/cerdo-storybook-utils/lib/props-addon/register'
 import '@storybook/addon-knobs/register'
-import '@utilitywarehouse/william-storybook-utils/lib/theme-addon/register'
+import '@utilitywarehouse/cerdo-storybook-utils/lib/theme-addon/register'
 import '@storybook/addon-options/register'
 import '@storybook/addon-links/register'

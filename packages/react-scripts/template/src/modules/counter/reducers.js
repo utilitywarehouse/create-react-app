@@ -1,4 +1,4 @@
-import { createReducer } from '@utilitywarehouse/william-sdk'
+import { createReducer } from '@utilitywarehouse/cerdo-sdk'
 
 export const KEY = 'COUNTER'
 export const handlers = {

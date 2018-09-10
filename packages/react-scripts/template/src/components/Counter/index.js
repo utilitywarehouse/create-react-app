@@ -1,4 +1,4 @@
-import { themedComponent, spreadStylesToProps } from '@utilitywarehouse/william-sdk'
+import { themedComponent, spreadStylesToProps } from '@utilitywarehouse/cerdo-sdk'
 
 import Component from './Counter'
 

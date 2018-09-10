@@ -1,12 +1,12 @@
 import React from 'react'
 import {
-  createWilliam,
+  create,
   Provider,
   NavigationModule,
   OverlayModule,
   ThemeModule,
   ResponsiveModule,
-} from '@utilitywarehouse/william-sdk'
+} from '@utilitywarehouse/cerdo-sdk'
 import Navigator from './navigation'
 import theme from './theme'
 
@@ -14,19 +14,19 @@ import CounterModule from 'modules/counter'
 
 export default function() {
   const config = {
-    // Set URI property to use william-core/connect with william-server
+    // Set URI property to use cerdo-core/connect with cerdo-server
     // uri: 'http://127.0.0.1:8080/graphql',
   }
-  const william = createWilliam(
+  const instance = create(
     config,
+    NavigationModule({ navigator: Navigator }),
     CounterModule(),
-    ThemeModule(theme),
-    ResponsiveModule(),
-    OverlayModule(),
-    NavigationModule({ navigator: Navigator })
+    OverlayModule({}),
+    ResponsiveModule({}),
+    ThemeModule(theme)
   )
 
   return {
-    rootComponent: <Provider william={william} />,
+    rootComponent: <Provider instance={instance} />,
   }
 }

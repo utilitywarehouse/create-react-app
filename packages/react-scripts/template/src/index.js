@@ -1,3 +1,3 @@
 // entry file for "react-scripts start" script
-import '@utilitywarehouse/william-sdk/register'
+import '@utilitywarehouse/cerdo-sdk/register'
 import './index.web'

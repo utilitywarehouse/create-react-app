@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Layout, responsiveThemedComponent } from '@utilitywarehouse/william-sdk'
+import { Layout, responsiveThemedComponent } from '@utilitywarehouse/cerdo-sdk'
 import LeftMenu from './LeftMenu'
 import TopMenu from './TopMenu'
 

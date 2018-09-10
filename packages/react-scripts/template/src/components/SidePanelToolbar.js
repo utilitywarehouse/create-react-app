@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { NavigationActions, Toolbar } from '@utilitywarehouse/william-sdk'
+import { NavigationActions, Toolbar } from '@utilitywarehouse/cerdo-sdk'
 
 const SidePanelToolbar = ({ navigation, ...props }) => (
   <Toolbar {...props}>

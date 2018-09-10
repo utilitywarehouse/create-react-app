@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Tabs, ViewPropTypes, themedComponent } from '@utilitywarehouse/william-sdk'
+import { Tabs, ViewPropTypes, themedComponent } from '@utilitywarehouse/cerdo-sdk'
 
 const TopMenu = ({ navigateHandler, isMenuSelected, style, onlyIcons, contentStyle }) => (
   <Tabs style={style} contentStyle={contentStyle}>

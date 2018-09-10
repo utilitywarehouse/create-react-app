@@ -1,7 +1,7 @@
 import React from 'react'
 import { withProps } from 'recompose'
 import PropTypes from 'prop-types'
-import { Text, StyleSheet } from '@utilitywarehouse/william-sdk'
+import { Text, StyleSheet } from '@utilitywarehouse/cerdo-sdk'
 
 const EmptyScreen = ({ name }) => <Text style={styles.text}>{name}</Text>
 EmptyScreen.displayName = 'EmptyScreen'

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { View, DialogModal, Button, Badge, themedComponent } from '@utilitywarehouse/william-sdk'
+import { View, DialogModal, Button, Badge, themedComponent } from '@utilitywarehouse/cerdo-sdk'
 
 const Component = ({ style, onOpenPress, isOpen, onRequestClose }) => (
   <View style={style}>

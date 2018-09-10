@@ -11,6 +11,10 @@ help:
 bypass:
 	@echo Nothing to see here...
 
+clean:
+	@echo "Removing dependencies"
+	-@rm -Rf node_modules || true
+
 # BOOTSTRAPPING
 
 install:
@@ -18,7 +22,7 @@ install:
 
 link:
 	react-native link react-native-vector-icons
-	# https://github.com/utilitywarehouse/william-sdk/issues/407#issuecomment-406276949
+	# https://github.com/utilitywarehouse/cerdo-sdk/issues/407#issuecomment-406276949
 	
 test:
 	npm test
